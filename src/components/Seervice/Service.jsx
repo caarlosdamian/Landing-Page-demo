@@ -94,7 +94,7 @@ const Service = () => {
             <MiniCard />
             <MiniCard />
           </CardContainer>
-          <Button onClick={() => setOpen(!open)}>
+          <Button onClick={() => setOpen(true)}>
             <Icon src={Play} />
             How it works
           </Button>
