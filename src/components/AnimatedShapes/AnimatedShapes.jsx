@@ -29,7 +29,7 @@ const Circle =styled.div`
 
     @keyframes circle{
         to{
-            transform: translate(100vw,100vh);
+            transform: translate(100vw,50vh);
         }
     }
 `
