@@ -1,5 +1,10 @@
+import styled from "styled-components";
+
+const Container = styled.div`
+  
+`;
 const App = () => {
-  return <div>Hello world!</div>;
+  return <Container>Hello world!</Container>;
 };
 
 export default App;
