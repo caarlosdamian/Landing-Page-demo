@@ -1,46 +1,55 @@
 import styled from "styled-components";
 import Phone from "../../img/app.png";
 import AnimatedShapes from "../AnimatedShapes/AnimatedShapes";
+import { mobile } from "../../responsive";
 const Container = styled.div`
   display: flex;
+  ${mobile({ flexDirection:"column",padding:"30px" })}
+
 `;
 const Left = styled.div`
   width: 50%;
+  ${mobile({ display:"none" })}
+
 `;
 const Right = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  ${mobile({ width:"100%" })}
+
 `;
 const Image = styled.img`
   width: 70%;
+  
 `;
 const Title = styled.span`
   font-size: 70px;
+  ${mobile({ fontSize:"50px" })}
+
 `;
 const SubTitle = styled.span`
   font-size: 24px;
   font-style: italic;
   color: #333;
   margin-top: 30px;
-
 `;
 const Desc = styled.p`
-    font-size: 20px;
-    color: #777;
-    margin-top: 30px;
+  font-size: 20px;
+  color: #777;
+  margin-top: 30px;
 `;
 const Button = styled.button`
-    width: 200px;
-    border: none;
-    padding: 15px 20px;
-    background-color: darkblue;
-    color: white;
-    border-radius: 20px;
-    font-size: 20px;
-    cursor: pointer;
-    margin-top: 20px;
+  width: 200px;
+  border: none;
+  padding: 15px 20px;
+  background-color: darkblue;
+  color: white;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 20px;
 `;
 const Feature = () => {
   return (
@@ -64,7 +73,7 @@ const Feature = () => {
         </Desc>
         <Button>Learn More</Button>
       </Right>
-      <AnimatedShapes/>
+      <AnimatedShapes />
     </Container>
   );
 };

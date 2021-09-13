@@ -1,10 +1,13 @@
 import styled from "styled-components";
 import Man from "../../img/man4.png";
 import AnimatedShapes from "../AnimatedShapes/AnimatedShapes";
+import {mobile} from '../../responsive'
 const Container = styled.div`
   height: calc(100vh - 50px);
   display: flex;
   padding: 20px;
+  ${mobile({ flexDirection:"column" })}
+
 `;
 
 const Left = styled.div`
@@ -13,17 +16,23 @@ const Left = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  ${mobile({ width:"100%",height:"100%" })}
+
 `;
 
 const Title = styled.h1`
   width: 60%;
   font-size: 60px;
+  ${mobile({ width:"100%",fontSize:"50px" })}
+
 `;
 
 const Desc = styled.p`
   width: 60%;
   font-size: 20px;
   margin-top: 20px;
+  ${mobile({ width:"100%" })}
+
 `;
 
 const Info = styled.div`
@@ -32,6 +41,8 @@ const Info = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${mobile({ width:"100%",flexDirection:"column" })}
+
 `;
 
 const Button = styled.button`
@@ -43,6 +54,8 @@ const Button = styled.button`
   border: none;
   letter-spacing: 2px;
   cursor: pointer;
+  ${mobile({ marginBottom:"20px" })}
+
 `;
 const Contact = styled.div`
   display: flex;
@@ -58,6 +71,8 @@ const ContactText = styled.span`
 `;
 const Right = styled.div`
   height: 40%;
+  ${mobile({ display:"none" })}
+
 `;
 
 const Image = styled.img`

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../../responsive";
 
 const Container = styled.div`
   height: 50px;
@@ -25,9 +26,7 @@ const Logo = styled.h1`
 const Menu = styled.ul`
   display: flex;
   list-style: none;
-  @media only screen and (max-width: 480px) {
-    display: none;
-  }
+  ${mobile({ display:"none" })}
 `;
 
 const MenuItem = styled.li`

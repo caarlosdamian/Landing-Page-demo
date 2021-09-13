@@ -1,9 +1,12 @@
 import styled, { css } from "styled-components";
 import Feature from "./components/Feature/Feature";
+import Footer from "./components/Footer/Footer";
 import Intro from "./components/Intro/Intro";
 import Navbar from "./components/Navbar/Navbar";
 import Price from "./components/Price/Price";
 import Service from "./components/Seervice/Service";
+import Contact from "./components/Contact/Contact";
+import {mobile} from './responsive'
 
 const Container = styled.div`
   height: 100vh;
@@ -33,12 +36,13 @@ const ServiceShape = styled.div`
   ${Shape}
   clip-path: polygon(0% 0%, 25% 0%, 25% 100%, 0% 100%);
   background-color: #f88497;
+  ${mobile({ display:"none" })}
 `;
 const PriceShape = styled.div`
   ${Shape}
   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 100% 100%);
 
-  background-color:crimson;
+  background-color: crimson;
 `;
 const App = () => {
   return (
@@ -57,8 +61,12 @@ const App = () => {
         <ServiceShape />
       </Container>
       <Container>
-        <Price/>
-        <PriceShape/>
+        <Price />
+        <PriceShape />
+      </Container>
+      <Container>
+        <Contact />
+        <Footer />
       </Container>
     </>
   );

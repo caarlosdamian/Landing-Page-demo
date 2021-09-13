@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import PriceCard from "../PriceCard/PriceCard";
+import { mobile } from "../../responsive";
+
 const Container = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  ${mobile({ flexDirection: "column" })}
+
 `;
 
 const Price = () => {

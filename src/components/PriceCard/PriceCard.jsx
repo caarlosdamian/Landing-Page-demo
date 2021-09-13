@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../../responsive";
 
 const Container = styled.div`
   padding: 20px;
@@ -10,6 +11,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin-right: 50px;
+  ${mobile({ padding: "10px", marginRight: "0px", marginBottom: "10px" })}
 `;
 const PriceContainer = styled.div`
   display: flex;
@@ -18,6 +20,7 @@ const PriceContainer = styled.div`
 const Price = styled.span`
   font-weight: bold;
   font-size: 50px;
+  ${mobile({ fontSize: "20px" })}
 `;
 const Type = styled.button`
   padding: 10px;
@@ -26,12 +29,14 @@ const Type = styled.button`
   background-color: white;
   color: crimson;
   border-radius: 20px;
+  ${mobile({ display: "none" })}
 `;
 const List = styled.ul`
   list-style: none;
 `;
 const ListItem = styled.li`
   margin: 30px 0px;
+  ${mobile({ margin: "15px 0", fontsize: "15px" })}
 `;
 const Button = styled.button`
   border: none;
@@ -41,6 +46,7 @@ const Button = styled.button`
   font-size: 16px;
   padding: 15px;
   border-radius: 10px;
+  ${mobile({ padding: "10px", fontsize: "12px" })}
 `;
 
 const PriceCard = ({ price, type }) => {
